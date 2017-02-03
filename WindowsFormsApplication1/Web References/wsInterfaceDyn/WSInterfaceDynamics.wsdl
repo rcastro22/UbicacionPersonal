@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://localhost/WebService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://localhost/WebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/WebService">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdDynCareers">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdDynCareersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdDynCareersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="foto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="_correlativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fotoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdDynTorresSalones">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdDynTorresSalonesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdDynTorresSalonesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatOra">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDatOraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatOraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="testConnection">
+        <s:complexType />
+      </s:element>
+      <s:element name="testConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="testConnectionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdDynCareersPrueba">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_careerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_descriptionCareer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_directorName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_principalCareer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_dim1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_dim2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdDynCareersPruebaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdDynCareersPruebaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ViewCareers">
+        <s:complexType />
+      </s:element>
+      <s:element name="ViewCareersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ViewCareersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="nuevoTutorDocenteDAX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_orig" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_codigo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="nuevoTutorDocenteDAXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nuevoTutorDocenteDAXResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="nuevoEmpleadoDynamics">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_emplId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_dpi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_primerNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_segundoNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_primerApellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_segundoApellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_apellidoCasada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_fechaNac" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_estadoCivil" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="_sexo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="_paisNac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_depNac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_muniNac" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_depDpi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_muniDpi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="nuevoEmpleadoDynamicsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nuevoEmpleadoDynamicsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_emplId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtenerNombreResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Buscar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_txtBusqueda" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cargar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Torre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Oficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correlativo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Puesto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Guardar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Torre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Oficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Extension" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="retTorres">
+        <s:complexType />
+      </s:element>
+      <s:element name="retTorresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retTorresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retSalones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_torre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retSalonesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retSalonesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdDynCareersSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdDynCareers" />
+  </wsdl:message>
+  <wsdl:message name="UpdDynCareersSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdDynCareersResponse" />
+  </wsdl:message>
+  <wsdl:message name="fotoSoapIn">
+    <wsdl:part name="parameters" element="tns:foto" />
+  </wsdl:message>
+  <wsdl:message name="fotoSoapOut">
+    <wsdl:part name="parameters" element="tns:fotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdDynTorresSalonesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdDynTorresSalones" />
+  </wsdl:message>
+  <wsdl:message name="UpdDynTorresSalonesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdDynTorresSalonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatOraSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatOra" />
+  </wsdl:message>
+  <wsdl:message name="GetDatOraSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatOraResponse" />
+  </wsdl:message>
+  <wsdl:message name="testConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:testConnection" />
+  </wsdl:message>
+  <wsdl:message name="testConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:testConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdDynCareersPruebaSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdDynCareersPrueba" />
+  </wsdl:message>
+  <wsdl:message name="UpdDynCareersPruebaSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdDynCareersPruebaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ViewCareersSoapIn">
+    <wsdl:part name="parameters" element="tns:ViewCareers" />
+  </wsdl:message>
+  <wsdl:message name="ViewCareersSoapOut">
+    <wsdl:part name="parameters" element="tns:ViewCareersResponse" />
+  </wsdl:message>
+  <wsdl:message name="nuevoTutorDocenteDAXSoapIn">
+    <wsdl:part name="parameters" element="tns:nuevoTutorDocenteDAX" />
+  </wsdl:message>
+  <wsdl:message name="nuevoTutorDocenteDAXSoapOut">
+    <wsdl:part name="parameters" element="tns:nuevoTutorDocenteDAXResponse" />
+  </wsdl:message>
+  <wsdl:message name="nuevoEmpleadoDynamicsSoapIn">
+    <wsdl:part name="parameters" element="tns:nuevoEmpleadoDynamics" />
+  </wsdl:message>
+  <wsdl:message name="nuevoEmpleadoDynamicsSoapOut">
+    <wsdl:part name="parameters" element="tns:nuevoEmpleadoDynamicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:obtenerNombre" />
+  </wsdl:message>
+  <wsdl:message name="obtenerNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:obtenerNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSoapIn">
+    <wsdl:part name="parameters" element="tns:Buscar" />
+  </wsdl:message>
+  <wsdl:message name="BuscarSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarSoapIn">
+    <wsdl:part name="parameters" element="tns:Cargar" />
+  </wsdl:message>
+  <wsdl:message name="CargarSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarSoapIn">
+    <wsdl:part name="parameters" element="tns:Guardar" />
+  </wsdl:message>
+  <wsdl:message name="GuardarSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="retTorresSoapIn">
+    <wsdl:part name="parameters" element="tns:retTorres" />
+  </wsdl:message>
+  <wsdl:message name="retTorresSoapOut">
+    <wsdl:part name="parameters" element="tns:retTorresResponse" />
+  </wsdl:message>
+  <wsdl:message name="retSalonesSoapIn">
+    <wsdl:part name="parameters" element="tns:retSalones" />
+  </wsdl:message>
+  <wsdl:message name="retSalonesSoapOut">
+    <wsdl:part name="parameters" element="tns:retSalonesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSInterfaceDynamicsSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynCareers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza los datos en Microsoft Dynamics AX de Oracle</wsdl:documentation>
+      <wsdl:input message="tns:UpdDynCareersSoapIn" />
+      <wsdl:output message="tns:UpdDynCareersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="foto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna Byte de la foto de los administrativos</wsdl:documentation>
+      <wsdl:input message="tns:fotoSoapIn" />
+      <wsdl:output message="tns:fotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynTorresSalones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza Torres y Salones de Oracle a Dynamics</wsdl:documentation>
+      <wsdl:input message="tns:UpdDynTorresSalonesSoapIn" />
+      <wsdl:output message="tns:UpdDynTorresSalonesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatOra">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna la DateSet de las carreras desde Oracle</wsdl:documentation>
+      <wsdl:input message="tns:GetDatOraSoapIn" />
+      <wsdl:output message="tns:GetDatOraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="testConnection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Prueba de conexión a Microsoft Dynamics AX</wsdl:documentation>
+      <wsdl:input message="tns:testConnectionSoapIn" />
+      <wsdl:output message="tns:testConnectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynCareersPrueba">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Prueba para la actualizacion de carreras a Dynamics</wsdl:documentation>
+      <wsdl:input message="tns:UpdDynCareersPruebaSoapIn" />
+      <wsdl:output message="tns:UpdDynCareersPruebaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewCareers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ver listado de carreras</wsdl:documentation>
+      <wsdl:input message="tns:ViewCareersSoapIn" />
+      <wsdl:output message="tns:ViewCareersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoTutorDocenteDAX">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ingresa los docentes y tutores según su numero de NIT</wsdl:documentation>
+      <wsdl:input message="tns:nuevoTutorDocenteDAXSoapIn" />
+      <wsdl:output message="tns:nuevoTutorDocenteDAXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoEmpleadoDynamics">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Crea los empleados en Dynamics desde la aplicacion de Carne</wsdl:documentation>
+      <wsdl:input message="tns:nuevoEmpleadoDynamicsSoapIn" />
+      <wsdl:output message="tns:nuevoEmpleadoDynamicsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerNombre">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene el nombre del empleado de Dynamics según el codigo</wsdl:documentation>
+      <wsdl:input message="tns:obtenerNombreSoapIn" />
+      <wsdl:output message="tns:obtenerNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Buscar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca empleados para la aplicacion de windows</wsdl:documentation>
+      <wsdl:input message="tns:BuscarSoapIn" />
+      <wsdl:output message="tns:BuscarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cargar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca un empleado especifico para la aplicacion de windows</wsdl:documentation>
+      <wsdl:input message="tns:CargarSoapIn" />
+      <wsdl:output message="tns:CargarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualiza el empleado de Dynamics desde aplicacion de windows</wsdl:documentation>
+      <wsdl:input message="tns:GuardarSoapIn" />
+      <wsdl:output message="tns:GuardarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retTorres">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene las Torres de Oracle</wsdl:documentation>
+      <wsdl:input message="tns:retTorresSoapIn" />
+      <wsdl:output message="tns:retTorresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retSalones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obtiene los Salones de Oracle</wsdl:documentation>
+      <wsdl:input message="tns:retSalonesSoapIn" />
+      <wsdl:output message="tns:retSalonesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSInterfaceDynamicsSoap" type="tns:WSInterfaceDynamicsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://localhost/WebService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynCareers">
+      <soap:operation soapAction="http://localhost/WebService/UpdDynCareers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="foto">
+      <soap:operation soapAction="http://localhost/WebService/foto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynTorresSalones">
+      <soap:operation soapAction="http://localhost/WebService/UpdDynTorresSalones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatOra">
+      <soap:operation soapAction="http://localhost/WebService/GetDatOra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testConnection">
+      <soap:operation soapAction="http://localhost/WebService/testConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynCareersPrueba">
+      <soap:operation soapAction="http://localhost/WebService/UpdDynCareersPrueba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewCareers">
+      <soap:operation soapAction="http://localhost/WebService/ViewCareers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoTutorDocenteDAX">
+      <soap:operation soapAction="http://localhost/WebService/nuevoTutorDocenteDAX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoEmpleadoDynamics">
+      <soap:operation soapAction="http://localhost/WebService/nuevoEmpleadoDynamics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerNombre">
+      <soap:operation soapAction="http://localhost/WebService/obtenerNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar">
+      <soap:operation soapAction="http://localhost/WebService/Buscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cargar">
+      <soap:operation soapAction="http://localhost/WebService/Cargar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <soap:operation soapAction="http://localhost/WebService/Guardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retTorres">
+      <soap:operation soapAction="http://localhost/WebService/retTorres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retSalones">
+      <soap:operation soapAction="http://localhost/WebService/retSalones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSInterfaceDynamicsSoap12" type="tns:WSInterfaceDynamicsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://localhost/WebService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynCareers">
+      <soap12:operation soapAction="http://localhost/WebService/UpdDynCareers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="foto">
+      <soap12:operation soapAction="http://localhost/WebService/foto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynTorresSalones">
+      <soap12:operation soapAction="http://localhost/WebService/UpdDynTorresSalones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatOra">
+      <soap12:operation soapAction="http://localhost/WebService/GetDatOra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testConnection">
+      <soap12:operation soapAction="http://localhost/WebService/testConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdDynCareersPrueba">
+      <soap12:operation soapAction="http://localhost/WebService/UpdDynCareersPrueba" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewCareers">
+      <soap12:operation soapAction="http://localhost/WebService/ViewCareers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoTutorDocenteDAX">
+      <soap12:operation soapAction="http://localhost/WebService/nuevoTutorDocenteDAX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoEmpleadoDynamics">
+      <soap12:operation soapAction="http://localhost/WebService/nuevoEmpleadoDynamics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerNombre">
+      <soap12:operation soapAction="http://localhost/WebService/obtenerNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buscar">
+      <soap12:operation soapAction="http://localhost/WebService/Buscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cargar">
+      <soap12:operation soapAction="http://localhost/WebService/Cargar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <soap12:operation soapAction="http://localhost/WebService/Guardar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retTorres">
+      <soap12:operation soapAction="http://localhost/WebService/retTorres" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retSalones">
+      <soap12:operation soapAction="http://localhost/WebService/retSalones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSInterfaceDynamics">
+    <wsdl:port name="WSInterfaceDynamicsSoap" binding="tns:WSInterfaceDynamicsSoap">
+      <soap:address location="http://dynamics.galileo.edu/ws/WSInterfaceDynamics.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSInterfaceDynamicsSoap12" binding="tns:WSInterfaceDynamicsSoap12">
+      <soap12:address location="http://dynamics.galileo.edu/ws/WSInterfaceDynamics.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

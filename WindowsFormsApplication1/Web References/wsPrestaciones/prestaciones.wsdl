@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="actualizarAdministrativos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodPers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoCarnet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Accion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NIT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NombreImpresion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EstadoCivil" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaNacimiento" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDOrden" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDRegistro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDPais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDDepartamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDMunicipio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AdmonPuesto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AdmonDepartamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarAdministrativosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actualizarAdministrativosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarDireccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodPers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Casa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Colonia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Municipio" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarDireccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actualizarDireccionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cambiarFotografia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="foto" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correlativo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="cambiarFotografiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cambiarFotografiaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="solicitarCarne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vopcion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="foto" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Correlativo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="solicitarCarneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="solicitarCarneResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarDocente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarDocenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarDocenteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPaises">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerPaisesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerPaisesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCorrelativo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Correlativo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCorrelativoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCorrelativoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDepartamentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pais" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDepartamentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDepartamentosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCarnet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Carnet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarCarnetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarCarnetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMunicipios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMunicipiosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerMunicipiosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerOrdenes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Departamento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerOrdenesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerOrdenesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verificarRequisitos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verificarRequisitosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="verificarRequisitosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="esSecretaria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Carnet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="esSecretariaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="esSecretariaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="docenteActivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Correlativo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="docenteActivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="docenteActivoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarSolicitud">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="carrera" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="carnet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="comentarios" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tramite" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Aplicacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enviarSolicitudResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="enviarSolicitudResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="actualizarAdministrativosSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarAdministrativos" />
+  </wsdl:message>
+  <wsdl:message name="actualizarAdministrativosSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarAdministrativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDireccionSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarDireccion" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDireccionSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="cambiarFotografiaSoapIn">
+    <wsdl:part name="parameters" element="tns:cambiarFotografia" />
+  </wsdl:message>
+  <wsdl:message name="cambiarFotografiaSoapOut">
+    <wsdl:part name="parameters" element="tns:cambiarFotografiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="solicitarCarneSoapIn">
+    <wsdl:part name="parameters" element="tns:solicitarCarne" />
+  </wsdl:message>
+  <wsdl:message name="solicitarCarneSoapOut">
+    <wsdl:part name="parameters" element="tns:solicitarCarneResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarDocenteSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarDocente" />
+  </wsdl:message>
+  <wsdl:message name="BuscarDocenteSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarDocenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPaisesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPaises" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPaisesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPaisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCorrelativoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCorrelativo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCorrelativoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCorrelativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDepartamentosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDepartamentos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDepartamentosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDepartamentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCarnetSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarCarnet" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarCarnetSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarCarnetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMunicipiosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerMunicipios" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMunicipiosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerMunicipiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerOrdenesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerOrdenes" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerOrdenesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerOrdenesResponse" />
+  </wsdl:message>
+  <wsdl:message name="verificarRequisitosSoapIn">
+    <wsdl:part name="parameters" element="tns:verificarRequisitos" />
+  </wsdl:message>
+  <wsdl:message name="verificarRequisitosSoapOut">
+    <wsdl:part name="parameters" element="tns:verificarRequisitosResponse" />
+  </wsdl:message>
+  <wsdl:message name="esSecretariaSoapIn">
+    <wsdl:part name="parameters" element="tns:esSecretaria" />
+  </wsdl:message>
+  <wsdl:message name="esSecretariaSoapOut">
+    <wsdl:part name="parameters" element="tns:esSecretariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="docenteActivoSoapIn">
+    <wsdl:part name="parameters" element="tns:docenteActivo" />
+  </wsdl:message>
+  <wsdl:message name="docenteActivoSoapOut">
+    <wsdl:part name="parameters" element="tns:docenteActivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="enviarSolicitudSoapIn">
+    <wsdl:part name="parameters" element="tns:enviarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="enviarSolicitudSoapOut">
+    <wsdl:part name="parameters" element="tns:enviarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PrestacionesSoap">
+    <wsdl:operation name="actualizarAdministrativos">
+      <wsdl:input message="tns:actualizarAdministrativosSoapIn" />
+      <wsdl:output message="tns:actualizarAdministrativosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDireccion">
+      <wsdl:input message="tns:actualizarDireccionSoapIn" />
+      <wsdl:output message="tns:actualizarDireccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="cambiarFotografia">
+      <wsdl:input message="tns:cambiarFotografiaSoapIn" />
+      <wsdl:output message="tns:cambiarFotografiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="solicitarCarne">
+      <wsdl:input message="tns:solicitarCarneSoapIn" />
+      <wsdl:output message="tns:solicitarCarneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDocente">
+      <wsdl:input message="tns:BuscarDocenteSoapIn" />
+      <wsdl:output message="tns:BuscarDocenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPaises">
+      <wsdl:input message="tns:ObtenerPaisesSoapIn" />
+      <wsdl:output message="tns:ObtenerPaisesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCorrelativo">
+      <wsdl:input message="tns:ConsultarCorrelativoSoapIn" />
+      <wsdl:output message="tns:ConsultarCorrelativoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDepartamentos">
+      <wsdl:input message="tns:ObtenerDepartamentosSoapIn" />
+      <wsdl:output message="tns:ObtenerDepartamentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarnet">
+      <wsdl:input message="tns:ConsultarCarnetSoapIn" />
+      <wsdl:output message="tns:ConsultarCarnetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMunicipios">
+      <wsdl:input message="tns:ObtenerMunicipiosSoapIn" />
+      <wsdl:output message="tns:ObtenerMunicipiosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerOrdenes">
+      <wsdl:input message="tns:ObtenerOrdenesSoapIn" />
+      <wsdl:output message="tns:ObtenerOrdenesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verificarRequisitos">
+      <wsdl:input message="tns:verificarRequisitosSoapIn" />
+      <wsdl:output message="tns:verificarRequisitosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="esSecretaria">
+      <wsdl:input message="tns:esSecretariaSoapIn" />
+      <wsdl:output message="tns:esSecretariaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="docenteActivo">
+      <wsdl:input message="tns:docenteActivoSoapIn" />
+      <wsdl:output message="tns:docenteActivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarSolicitud">
+      <wsdl:input message="tns:enviarSolicitudSoapIn" />
+      <wsdl:output message="tns:enviarSolicitudSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrestacionesSoap" type="tns:PrestacionesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="actualizarAdministrativos">
+      <soap:operation soapAction="http://tempuri.org/actualizarAdministrativos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDireccion">
+      <soap:operation soapAction="http://tempuri.org/actualizarDireccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarFotografia">
+      <soap:operation soapAction="http://tempuri.org/cambiarFotografia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="solicitarCarne">
+      <soap:operation soapAction="http://tempuri.org/solicitarCarne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDocente">
+      <soap:operation soapAction="http://tempuri.org/BuscarDocente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPaises">
+      <soap:operation soapAction="http://tempuri.org/ObtenerPaises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCorrelativo">
+      <soap:operation soapAction="http://tempuri.org/ConsultarCorrelativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDepartamentos">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDepartamentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarnet">
+      <soap:operation soapAction="http://tempuri.org/ConsultarCarnet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMunicipios">
+      <soap:operation soapAction="http://tempuri.org/ObtenerMunicipios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerOrdenes">
+      <soap:operation soapAction="http://tempuri.org/ObtenerOrdenes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificarRequisitos">
+      <soap:operation soapAction="http://tempuri.org/verificarRequisitos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esSecretaria">
+      <soap:operation soapAction="http://tempuri.org/esSecretaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="docenteActivo">
+      <soap:operation soapAction="http://tempuri.org/docenteActivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSolicitud">
+      <soap:operation soapAction="http://tempuri.org/enviarSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PrestacionesSoap12" type="tns:PrestacionesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="actualizarAdministrativos">
+      <soap12:operation soapAction="http://tempuri.org/actualizarAdministrativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDireccion">
+      <soap12:operation soapAction="http://tempuri.org/actualizarDireccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cambiarFotografia">
+      <soap12:operation soapAction="http://tempuri.org/cambiarFotografia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="solicitarCarne">
+      <soap12:operation soapAction="http://tempuri.org/solicitarCarne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDocente">
+      <soap12:operation soapAction="http://tempuri.org/BuscarDocente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPaises">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerPaises" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCorrelativo">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarCorrelativo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDepartamentos">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDepartamentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCarnet">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarCarnet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMunicipios">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerMunicipios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerOrdenes">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerOrdenes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificarRequisitos">
+      <soap12:operation soapAction="http://tempuri.org/verificarRequisitos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="esSecretaria">
+      <soap12:operation soapAction="http://tempuri.org/esSecretaria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="docenteActivo">
+      <soap12:operation soapAction="http://tempuri.org/docenteActivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarSolicitud">
+      <soap12:operation soapAction="http://tempuri.org/enviarSolicitud" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Prestaciones">
+    <wsdl:port name="PrestacionesSoap" binding="tns:PrestacionesSoap">
+      <soap:address location="http://dg.galileo.edu/core/prestaciones.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PrestacionesSoap12" binding="tns:PrestacionesSoap12">
+      <soap12:address location="http://dg.galileo.edu/core/prestaciones.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

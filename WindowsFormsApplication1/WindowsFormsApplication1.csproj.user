@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>\\dynamics.galileo.edu\InstalaciónAX\4 - Interfaces\UbicacionPersonal\UbicacionPersonal 2\|publish\</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory>\\172.16.0.71\InstalaciónAX\4 - Interfaces\UbicacionPersonal\UbicacionPersonal 2\</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>
